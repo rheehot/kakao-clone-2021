@@ -1,3 +1,3 @@
-# kakao-clone-2021
+# Kakao Clone 2021
 
-kakao desktop app clone
+CSS got so much better!
