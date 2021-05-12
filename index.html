@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>    
+    <link rel="stylesheet" href="css/styles.css" /> <!--link:CSS-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to KakaoTalk</title>
 </head>
 <body>
-    <div id="status-bar">
+    <div class="status-bar">
         <div class="status-bar__column">
             <span>No service</span>
             <i class="fas fa-wifi"></i>
             <!-- To Do: Wifi Icon -->
         </div>
         <div class="status-bar__column">
-            <span>00:00</span>
+            <span>18:43</span>
         </div>
         <div class="status-bar__column">
             <!-- To Do: Lock Icon -->
@@ -25,6 +26,24 @@
             <!-- To Do: Lightening Icon -->
         </div>
     </div>
+       
+    <header class="welcome-header">
+        <h1 class ="welcome-header__title">Welcome to KakaoTalk</h1>
+        <p class ="welcome-header__text">
+            If you have a KaKao Account, log in with your email or phone number.
+        </p>
+    </header>
+
+    <form class="login-form">
+        <input type="text" placeholder="Email or phone number" />
+        <input type="password" placeholder="Password"  />
+        <input type="submit" value="Log in" />
+        <input type="submit" value="Sign up" />
+        <a href="#" class="href">Find KaKao Account or Password</a> <!--why move into form?-->>
+    </form>
+
+
+
     <script src="https://kit.fontawesome.com/6478f529f2.js"
 crossorigin="anonymous"
     ></script>
