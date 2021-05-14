@@ -33,10 +33,12 @@
             If you have a KaKao Account, log in with your email or phone number.
         </p>
     </header>
-
-    <form id="login-form">
-        <input type="text" placeholder="Email or phone number" />
-        <input type="password" placeholder="Password"  />
+    <!--action 속성 : 어떤 페이지로 데이터를 보낼 것인지 지정-->
+    <!--method 속성 : 두 가지 값 갖음 1) post: 백엔드 서버에서 정보를 전송
+                                  2) get : 보안에 취약,URL에 포함돼도 상관 없는 정보들 전송   -->
+    <form action="friends.html" method="get" id="login-form">
+        <input name="username"  type="text" placeholder="Email or phone number" required />
+        <input name="password"  type="password" placeholder="Password"required  />
         <input type="submit" value="Log in" />
         <input type="submit" value="Sign up" />
         <a href="#" class="href">Find KaKao Account or Password</a> <!--why move into form?-->
