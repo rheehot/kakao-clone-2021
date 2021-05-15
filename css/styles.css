@@ -11,10 +11,12 @@ body {
 @import "variable.css";
 /* compontents */
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
 /* screens */
 @import "screens/login.css";
 
 /* 모든 CSS에 적용할 수 있는 코드만 styles.css에 기재 */
 body {
   font-family: "Open Sans", sans-serif;
+  height: 1000vh;
 }
