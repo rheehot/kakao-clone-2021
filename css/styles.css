@@ -8,15 +8,19 @@ body {
 + reset CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Yellowtail&display=swap");
 @import "reset.css";
-@import "variable.css";
+@import "variables.css";
 /* compontents */
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
 /* screens */
 @import "screens/login.css";
+@import "screens/friends.css";
 
 /* 모든 CSS에 적용할 수 있는 코드만 styles.css에 기재 */
 body {
   font-family: "Open Sans", sans-serif;
   height: 1000vh;
+  color: #2e363e;
 }

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   padding: 5px 3px;
+  background-color: white;
 }
 .status-bar__column {
   width: 33%;
@@ -12,6 +13,11 @@
 .status-bar__column:first-child span {
   margin-right: 5px;
 }
+
+.status-bar__column:last-child i {
+  margin-left: 5px;
+}
+
 .status-bar__column:nth-child(2) {
   display: flex;
   justify-content: center;
@@ -22,5 +28,5 @@
   align-items: center;
 }
 .status-bar__column .fas fa-battery-full {
-  margin: 5px 5px;
+  margin: 0px 5px;
 }

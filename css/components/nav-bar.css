@@ -4,13 +4,47 @@
   width: 100%;
   background-color: #f9f9fa;
   padding: 30px 50px;
-  box-sizing: border-box; /* Nico's Magic Line */
+  box-sizing: border-box; /* Nico's Magic Line : to be able to make box size shrink */
   border-top: 1px solid rgba(121, 121, 121, 0.2);
 }
 
 .nav__list {
   display: flex;
   justify-content: space-between;
+}
+
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute; /* position: absolute는 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
+  left: 17px;
+  bottom: 17px;
+}
+
+.nav__update {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
 }
 
 /* 링크 색 inherit은 reset.css에서 해준다*/
