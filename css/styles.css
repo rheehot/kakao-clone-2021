@@ -18,6 +18,7 @@ body {
 /* screens */
 @import "screens/login.css";
 @import "screens/friends.css";
+@import "screens/find.css";
 
 /* 모든 CSS에 적용할 수 있는 코드만 styles.css에 기재 */
 body {
