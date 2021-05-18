@@ -8,7 +8,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Chats - KakaoTalk</title>
+        <title>Settings - KakaoTalk</title>
     </head>
     <body>
         <div class="status-bar">
@@ -30,35 +30,44 @@
             </div>
         </div>
 
-        <header class="screen-header">
-            <h1 class="screen-header__title">Chats</h1>
-              <div class="screen-header__icons">
-                <span><i class="fas fa-search fa-lg"></i></span>
-                <span><i class="far fa-comment-dots fa-lg"></i></span>
-                <span><i class="fas fa-music fa-lg"></i></span>
-                <span><i class="fas fa-cog fa-lg"></i></span>
-               </div>
+        <header class="alt-header">
+            <div class="alt-header__column">
+                <a href="more.html">
+                  <i class="fas fa-chevron-left fa-2x"></i>
+                </a>
+            </div>
+            <div class="alt-header__column">
+                <h1 class="screen-header__title">Settings</h1>
+            </div>
+            <div class="alt-header__column">
+                <span><i class="fas fa-search fa-lg"></i></span> 
+            </div>
         </header>
-
         <main class="main-screen">
-            <a href="chat.html">
-                <div class="user-component">
-                <div class="user-component__column">
-                    <img src="https://avatars.githubusercontent.com/u/55142939?v=4" 
-                    class="user-component__avatar user-component__avatar"/>
-                    <div class="user-component__text">
-                        <h4 class="user-component__title">Jiwoo Homin</h4>
-                        <h6 class="user-component__subtitle">Please check My Kakao Account Info</h6> 
+            <ul class="settings-list">
+                <li class="settings__setting">
+                    <div class="settings__setting__column">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Notices</span>                        
                     </div>
-                </div>
-                <div class="user-component__column">
-                    <span class="user-component__time">21:22</span>
-                    <div class="badge">1</div>
-                </div>
-                </div>
-            </a>
+                    <div class="settings__setting__column"></div>
+                </li>
+                <li class="settings__setting">
+                    <div class="settings__setting__column">
+                        <i class="fas fa-flask"></i>
+                        <span>Kakao Lab</span>                    
+                    </div>
+                    <div class="settings__setting__column"></div>
+                </li>
+                <li class="settings__setting">
+                    <div class="settings__setting__column">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Version</span>                                    
+                    </div>
+                    <div class="settings__setting__column">Latest Version</div>
+                </li>
+            </ul>
         </main>
-            
         <!--구글도 navigation을 찾아서 ul의 li 안에 있는 link를 가져오게금 설정돼있다.-->
         <!--VSCODE 단축키-->
         <nav class="nav">
@@ -71,7 +80,7 @@
                 <li class="nav__btn">
                     <a class="nav__link" href="chats.html">
                             <span class="nav__notification badge">1</span>
-                            <i class="fas fa-comment fa-2x"></i>
+                            <i class="far fa-comment fa-2x"></i>
                     </a>
                 </li>
                 <li class="nav__btn">
