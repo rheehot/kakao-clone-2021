@@ -97,3 +97,77 @@
      2) flex-direction: row-reverse <- 코드 더 간결하게 사용 가능*/
   flex-direction: row-reverse;
 }
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+}
+
+/* column에 width를 먼저 줘야 그 다음에 input을 줄 수 있다.  */
+/* last-child인 column의 두 icon을 absolute 포지션을 줄 것이기 때문에 column에 relative로 만들어야 함 */
+.reply .reply__column:first-child {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  width: 100%;
+  border-radius: 25px;
+  border: var(--main--border);
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+}
+
+.reply__column:last-child button {
+  right: 3px;
+  top: 10px;
+}
+
+.reply__column:last-child > i {
+  width: 31px;
+  height: 31px;
+  right: 25px;
+  top: 15px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
