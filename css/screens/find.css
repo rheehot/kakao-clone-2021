@@ -98,6 +98,28 @@
   right: 7px;
   font-size: 14px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  /* ! will-change : 기본적으로 브라우저에게 뭔가가 바뀔거라 말해준다. 이때, 브라우저는 애니메이션을 더 낫게 만든다.*/
+  will-change: transform;
+  animation: heartBeat 2s linear infinite;
+}
+
 .open-post__heart-count span {
   margin-left: 3px;
 }
