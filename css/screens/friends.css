@@ -32,3 +32,44 @@
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.5);
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ! 화면에 들어오면, 잠깐 나왔다가 사라지는 화면을 만들어보자(ex. 은행app)*/
+/* point 1. 작동은 하지만 되돌아온다. 애니메이션이 끝나면 element들은 이전 property(opacity:0)로 돌아간다 */
+/* point 2. forwards - 마지막 속성 값(final property value)은 keyframes로 정해지고 애니메이션이 끝나고 유지한다. 
+                        즉, 마지막 속성 값인 opacity: 0; 이 애니메이션이 끝나고도 유지가 된다.
+                        그러나, 속성은 남아있기 때문에, 화면 클릭이 안 된다. */
+/* point 3. Solution -  visibility: hidden을 해주면, 나온 화면을 사용할 수 있다. 
+                        그러나, #splash-screen element는 크롬 개발자도구에서 확인해보면, 그대로 남아있는 것을 확인할 수 있다.
+                        hidden은 마우스에 걸리지 않게 빠져버리는 것이다.
+                        그래서 문제 없이 클릭할 수 있다.
+                        그러나, html에는 여전히 존재하기 때문에, 뭔가를 숨긴다거나 할 땐 이 테크닉을 이용하면 안 된다. 
+                        ! 뭔가를 숨기거나, html을 제거하고 싶다면, JavaScript가 필요할 것이다.
+                        지금은 단지 브라우저가 이 element를 무시하도록 기술을 쓴 것이다. */
+/* point 4. animation-delay: 애니메이션을 바로 재생하지 않고 몇 초후에 실행시키고 싶을 때 사용*/
+
+#splash-screen {
+  background-color: var(--yellow);
+  /* 모든 레이어 위에 있음. 모든 것을 커버함*/
+  position: absolute;
+  /*  화면 높이의 100%를 의미 */
+  height: 100vh;
+  /*  화면 넓이의 100%를 의미 */
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  animation: hideSplashScreen 0.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
